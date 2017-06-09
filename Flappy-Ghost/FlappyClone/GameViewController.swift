@@ -19,17 +19,21 @@ class GameViewController: UIViewController {
             let skView = self.view as! SKView
             skView.showsFPS = true
             skView.showsNodeCount = true
-            
+
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
-            
+
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
             scene.size = self.view.bounds.size
-            
+
             skView.presentScene(scene)
         }
     }
+// En la clase que tiene la función viewDidLoad en la cual de ejecuta todo lo que se debe iniciar en la aplicación.
+//
+// Se crean la escena que está programada en el archivo GameScene, se muestra en la pantalla de la aplicación, además se configura para que se muestren el contador de nodos y los fotogramas por segundo en los que corre el juego, con fines de debug, pero estos se deben poner en false cuando la aplicación sea presentada a usuarios.
+
 
     override func shouldAutorotate() -> Bool {
         return true
